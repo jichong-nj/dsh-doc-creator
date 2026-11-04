@@ -1,6 +1,6 @@
 {
   "name": "@jichong/dsh-doc-creator",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Guided document authoring for DeepSeek Harness: templates or free-form, reference uploads, red-line rules, optional web research, versioned outlines, conversation-driven revisions, and Word/Markdown export",
   "license": "MIT",
   "author": "jichong-nj",

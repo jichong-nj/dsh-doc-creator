@@ -14,7 +14,7 @@ DSH Web 的**文档编写引导插件**：从模板或自由发挥出发，上�
 
 | 准备资料（模板 / 参考文档 / 红线 / 联网） | 大纲（多版本 + 共享上下文对话） | 成文（Word / Markdown / 红线自检） |
 | --- | --- | --- |
-| ![准备资料](docs/screenshots/setup.png) | ![大纲](docs/screenshots/outline.png) | ![成文](docs/screenshots/document.png) |
+| ![准备资料](https://raw.githubusercontent.com/jichong-nj/dsh-doc-creator/main/docs/screenshots/setup.png) | ![大纲](https://raw.githubusercontent.com/jichong-nj/dsh-doc-creator/main/docs/screenshots/outline.png) | ![成文](https://raw.githubusercontent.com/jichong-nj/dsh-doc-creator/main/docs/screenshots/document.png) |
 
 ## 功能
 
