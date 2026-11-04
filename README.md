@@ -1,5 +1,7 @@
 # @jichong/dsh-doc-creator
 
+[![test](https://github.com/jichong-nj/dsh-doc-creator/actions/workflows/test.yml/badge.svg)](https://github.com/jichong-nj/dsh-doc-creator/actions/workflows/test.yml)
+
 DSH Web 的**文档编写引导插件**：从模板或自由发挥出发，上传参考文档、设定红线要求、可选联网检索，
 生成并管理**多版本大纲**；确认大纲后生成 **Word（.docx）+ Markdown** 成文。大纲与成文两个阶段
 都可以通过对话调整，且**共享同一段对话上下文**。
