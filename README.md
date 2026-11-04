@@ -1,6 +1,7 @@
 # @jichong/dsh-doc-creator
 
 [![test](https://github.com/jichong-nj/dsh-doc-creator/actions/workflows/test.yml/badge.svg)](https://github.com/jichong-nj/dsh-doc-creator/actions/workflows/test.yml)
+[![npm](https://img.shields.io/npm/v/%40jichong%2Fdsh-doc-creator?label=npm)](https://www.npmjs.com/package/@jichong/dsh-doc-creator)
 
 DSH Web 的**文档编写引导插件**：从模板或自由发挥出发，上传参考文档、设定红线要求、可选联网检索，
 生成并管理**多版本大纲**；确认大纲后生成 **Word（.docx）+ Markdown** 成文。大纲与成文两个阶段
@@ -36,21 +37,31 @@ DSH Web 的**文档编写引导插件**：从模板或自由发挥出发，上�
 
 ## 安装
 
-面向本机 DSH Web profile（与 ppt-search 相同的安装方式）：
+从 npm 安装到 DSH Web profile（与 ppt-search 相同的安装方式）：
 
 ```sh
-# 1) 把插件链接进 web profile
-dsh plugin --profile web add link:/path/to/dsh-doc-creator
+# 方式一：通过 dsh plugin 管理（会写入 profile 依赖）
+dsh plugin --profile web add @jichong/dsh-doc-creator
 
-# 2) 确认 profile package.json 的 dsh.profile.bundles 已包含 @jichong/dsh-doc-creator
-# 3) 重启 DSH Web
+# 方式二：直接用 npm 安装到 web profile
+npm install @jichong/dsh-doc-creator --prefix ~/.dsh/profiles/web
 ```
 
-重启后打开 DSH Web GUI，左侧边栏出现「文档创作」图标；主面板即工作台。
+然后确认 `~/.dsh/profiles/web/package.json` 的 `dsh.profile.bundles` 里包含
+`@jichong/dsh-doc-creator`，重启 DSH Web。重启后左侧边栏出现「文档创作」图标，主面板即工作台。
 
-> 开发期也可手动把 `"@jichong/dsh-doc-creator": "link:/path/to/doc-creator"` 写入
-> `~/.dsh/profiles/web/package.json` 的 `dependencies`，并把包名加入 `dsh.profile.bundles`，
-> 在 profile 的 `node_modules/@jichong/` 下建立同名软链后重启。
+开发期也可以把本地仓库链接进 profile（修改源码即时生效，需自行 `node build.js`）：
+
+```sh
+dsh plugin --profile web add link:/path/to/dsh-doc-creator
+```
+
+> npm 包已内置构建产物 `lib/client.js`，从 npm 安装后无需再构建。
+
+### 依赖
+
+- Node ≥ 24，DSH Web profile 已加载 `llm` / `web` 服务（生成与联网用）；
+- PDF 参考文档需要系统安装 `pdftotext`（poppler-utils）。
 
 ## 使用流程
 
