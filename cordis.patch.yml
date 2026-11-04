@@ -1,0 +1,7 @@
+# doc-creator — host patch layer.
+#
+# New rows must be appended with `insert` (a plain `- id:` patch only modifies
+# an existing row and the loader would skip an unknown entry).
+- insert:
+    - id: doc-creator
+      name: '@jichong/dsh-doc-creator'
